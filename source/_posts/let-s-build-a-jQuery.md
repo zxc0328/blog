@@ -1,6 +1,8 @@
 title: "Let's build a jQuery!-Part 1(early release)"
 date: 2016-03-11 17:24:00
-tags: jQuery JavaScript
+tags: 
+- jQuery 
+- JavaScript
 categories: 
 ---
 

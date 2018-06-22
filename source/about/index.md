@@ -2,7 +2,7 @@ title: About Me
 date: 2016-11-17 12:43:04
 ---
 
-华中师范大学[木犀团队](http://github.com/muxi-studio) || [蚂蚁金服数据体验技术](https://juejin.im/user/59659aff5188250cf956e6dd)前端开发 || Former@网易有数 || 平时喜欢研究前端工具和框架 || 喜欢研究函数式、编程语言、编译原理 || 会一点点[iOS](https://github.com/Muxi-Studio/ccnubox-iOS) || 对移动前端很感兴趣 || 绿城球迷 ||这是我的[Github](https://github.com/zxc0328)和[微博](http://www.weibo.com/zindex/)
+华中师范大学[木犀团队](http://github.com/muxi-studio) || 前端工程师 || 平时喜欢研究前端工具和框架 || 喜欢研究函数式、编程语言、编译原理 || 会一点点[iOS](https://github.com/Muxi-Studio/ccnubox-iOS) || 对移动前端很感兴趣 || 绿城球迷 ||这是我的[Github](https://github.com/zxc0328)和[微博](http://www.weibo.com/zindex/)
 
 
 ### 我喜欢的书

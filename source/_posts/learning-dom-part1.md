@@ -1,7 +1,7 @@
 title: "DOM API详解（一）"
 date: 2016-01-23 20:49:30
 tags: DOM
-categories: 
+categories: DOM
 ---
 
 ### 一、什么是DOM

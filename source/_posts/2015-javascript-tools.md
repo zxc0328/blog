@@ -1,7 +1,7 @@
 title: "2015年末必备前端工具集"
 date: 2015-12-28 22:03:42
 tags: Tooling
-categories:
+categories: Tooling
 ---
 > * 原文链接: [Must See JavaScript Dev Tools That Put Other Dev Tools to Shame](https://medium.com/javascript-scene/must-see-javascript-dev-tools-that-put-other-dev-tools-to-shame-aca6d3e3d925#.wm0lbpiko)
 * 原文作者 : [Eric Elliott](https://medium.com/@_ericelliott)

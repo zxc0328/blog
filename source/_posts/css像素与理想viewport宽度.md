@@ -1,7 +1,7 @@
 title: "css像素与理想viewport宽度"
 date: 2015-05-12 19:57:37
-tags: css
-categories: css
+tags: CSS
+categories: CSS
 ---
 最近在开发移动端网页时遇到了两大问题，一是移动端的触摸事件的实现；二是移动端页面的宽度设置问题。今天先来说一说移动端的页面宽度问题。  
 

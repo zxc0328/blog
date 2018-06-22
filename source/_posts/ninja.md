@@ -1,7 +1,7 @@
 title: "Ninja:dev server made easy"
 date: 2016-07-05 20:32:43
-tags:
-categories:
+tags: Tooling
+categories: Tooling
 ---
 
 [Ninja](https://github.com/Muxi-Studio/ninja)是一款用于前后端分离开发的本地开发服务器，也被称为是前端容器。它有以下一些特性：

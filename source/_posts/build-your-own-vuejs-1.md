@@ -1,7 +1,7 @@
 title: Build your own Vuejs Chapter1 Vue Overview
 date: 2016-12-12 17:11:50
-tags:
-categories:
+tags: Vue
+categories: Vue
 ---
 
 

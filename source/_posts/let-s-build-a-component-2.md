@@ -1,7 +1,7 @@
 title: 一个组件的诞生(下)
 date: 2016-09-30 10:34:07
-tags:
-categories:
+tags: Component
+categories: Component
 ---
 
 上一篇中我们实现了一个通用的组件模型。但这个模型在前端这种用户交互密集的应用场景下，会遇到更多的挑战。

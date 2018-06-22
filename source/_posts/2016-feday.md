@@ -1,7 +1,7 @@
 title: "2016 FEDay见闻录"
 date: 2016-03-19 22:27:24
 tags: FEDay
-categories:
+categories: FEDay
 ---
 
 这次FEDay是我第一次参加开发者大会，也是第一次去广州。当初主要是冲着两个Facebook的工程师去的，因为我对React好感度很高。总的来说这次的收获还是很多的，也算是值回票价了。

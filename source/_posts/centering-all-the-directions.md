@@ -1,7 +1,11 @@
 title: "居中一切(centering all the directions)by KYLE SIMPSON"
 date: 2015-05-21 22:53:26
-tags: html5 翻译
-categories: html5 翻译
+tags: 
+- HTML5
+- 翻译
+categories: 
+- HTML5
+- 翻译
 ---
 ![css centering](http://muxistudio.qiniudn.com/ccs_center_660_380px.jpg)
 

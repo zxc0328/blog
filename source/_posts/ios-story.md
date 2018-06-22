@@ -1,7 +1,7 @@
 title: 华师匣子iOS版开发记
 date: 2016-12-19 11:28:35
-tags:
-categories:
+tags: iOS
+categories: iOS
 ---
 
 这个月华师匣子的iOS版终于上线，历时四个多月的开发告一段落。我达成了从客户端开发0基础到App Store的成就。四个多月，99次提交，10个内测版本，两次App Store发布，这实在是一个值得纪念的时刻。

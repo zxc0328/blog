@@ -1,7 +1,7 @@
 title: 发布Regular Developer Tools
 date: 2016-07-26 18:20:33
-tags:
-categories:
+tags: Tooling
+categories: Tooling
 ---
 
 ### 为什么我们需要开发者工具？

@@ -1,7 +1,11 @@
 title: "Web Animation Using Javascript part one"
 date: 2015-05-23 22:47:00
-tags: 翻译,Javascript
-categories: 翻译,Javascript
+tags: 
+- 翻译
+- Javascript
+categories: 
+- 翻译
+- Javascript
 ---
 ##第二章：Velocity.js动画##
 在这一章，你将学到由Velocity.js提供的特性，指令，和选项。如果你熟悉基于jQuery的动画，那么你已经知道如何使用Velocity.js了；它的功能几乎和jQuery的$.animate()函数一模一样。
@@ -21,10 +25,17 @@ JavaScript动画库有很多类型。有些在浏览器中重现物理接触效�
 你可以从jQuery.com下载jQuery，从VelosityJS.org下载Velosity。在你的页面上使用它们——和任何JavaScript库一样——简单地把指向相应库文件的`<script> </script> `标签放在你页面的`</body>`标签之前。如果你想链接预部署版本的库文件（而不是你电脑上的本地拷贝），你的代码看起来可能是这样：
 
 
-    <html>      	<head>My Page</head>       <body>        	 My content.        	 <script src=”//code.jquery.com/jquery-2.1.1.min.js”>
-           </script>           <script src=”//cdn.jsdelivr.net/velocity/1.1.0/
+    <html>
+      	<head>My Page</head>
+       <body>
+        	 My content.
+        	 <script src=”//code.jquery.com/jquery-2.1.1.min.js”>
+           </script>
+           <script src=”//cdn.jsdelivr.net/velocity/1.1.0/
            velocity.min.js”>
-           </script>      </body>    </html>
+           </script>
+      </body>
+    </html>
 
 当一起使用jQuery和Velocity时，在Velocity前引入jQuery。    
 这就对了！现在你已经准备好了。
@@ -38,7 +49,11 @@ JavaScript动画库有很多类型。有些在浏览器中重现物理接触效�
 
 Velocity可以独立于jQuery运行，但是二者可以一起使用。一般我们推荐这么做来获得jQuery的链式调用能力：当你已经使用jQuery预选择了一个元素，你可以调用.velocity()来拓展它从而施加动画效果：
 
-    // 把jQuery元素对象赋值给一个变量    var $div = $(“div”);    // 使用Velocity对元素施加动画    $div.velocity({ opacity: 0 });    这种语法和jQuery自带的animate函数一模一样：
+    // 把jQuery元素对象赋值给一个变量
+    var $div = $(“div”);
+    // 使用Velocity对元素施加动画
+    $div.velocity({ opacity: 0 });
+    这种语法和jQuery自带的animate函数一模一样：
     $div.animate({ opacity: 0 });
     
 本书所有的例子都使用Velocity和jQuery的结合，因此可以使用这种语法。
@@ -47,7 +62,8 @@ Velocity可以独立于jQuery运行，但是二者可以一起使用。一般我
 
 Velocity接收多个参数。第一个参数是一个映射CSS属性到其最终值的对象。属性及其接收值的类型直接与CSS中使用的相对应（如果你不熟悉基础的CSS属性，在读这段代码之前读一本HTML和CSS的介绍性书籍）：
 
-     // 对元素施加动画使width变为“500px”，opacity变为1。     $element.velocity({ width: “500px”, opacity: 1 });
+     // 对元素施加动画使width变为“500px”，opacity变为1。
+     $element.velocity({ width: “500px”, opacity: 1 });
  --
  *Tip*  
  在JavaScript中，如果你将要提供一个包含字母（而不是只有整数）的属性值，把属性值放在引号中。
@@ -63,7 +79,10 @@ Velocity接收多个参数。第一个参数是一个映射CSS属性到其最终
       //时长1000ms的动画 (使用默认缓动模式swing)
       $element.velocity({ top: 50 }, 1000);
       //时长1000ms的动画，并且使用缓动模式“ease-in-out”
-      $element.velocity({ top: 50 }, 1000, “ease-in-out”);     //使用缓动模式“ease-out”，使用默认时长值400ms)     $element.velocity({ top: 50 }, “ease-out”);     //时长1000ms的动画,并且在动画完成时触发一个回调函数        
+      $element.velocity({ top: 50 }, 1000, “ease-in-out”);
+     //使用缓动模式“ease-out”，使用默认时长值400ms)
+     $element.velocity({ top: 50 }, “ease-out”);
+     //时长1000ms的动画,并且在动画完成时触发一个回调函数        
      $element.velocity({ top: 50 }, 1000, function() 
      { alert(“Complete.”) });
      
@@ -80,7 +99,8 @@ Velocity接收多个参数。第一个参数是一个映射CSS属性到其最终
     
 你不能这么做：
 
-    //错误：把动画选项分为逗号分隔语法和对象语法来写    $element.velocity({ top: 50 }, 1000, { easing: “ease-in-out”, 
+    //错误：把动画选项分为逗号分隔语法和对象语法来写
+    $element.velocity({ top: 50 }, 1000, { easing: “ease-in-out”, 
     delay: 500 });
     
 ###属性###
@@ -97,11 +117,18 @@ Velocity接收多个参数。第一个参数是一个映射CSS属性到其最终
     
 但是你不能传入:
 
-    // 错误：CSS属性被传入了多个数值    $element.velocity({ padding: “10 10 10 10” });
+    // 错误：CSS属性被传入了多个数值
+    $element.velocity({ padding: “10 10 10 10” });
     
 如果你想要把四个padding值(top, right, bottom, 和 left)加入动画，将它们列为分离的属性。
 
-    // 正确    $element.velocity({      paddingTop: 10,      paddingRight: 10,      paddingBottom: 10,      paddingLeft: 10    });
+    // 正确
+    $element.velocity({
+      paddingTop: 10,
+      paddingRight: 10,
+      paddingBottom: 10,
+      paddingLeft: 10
+    });
     
 其他可以接收多个数值的常见CSS属性包括`magrin`，`transform`， `text-shadow`，和`box-shadow`。
 
@@ -111,23 +138,34 @@ Velocity接收多个参数。第一个参数是一个映射CSS属性到其最终
 
 基于CSS的属性动画和基于JavaScript的属性动画的第二处不同是JavaScript属性没有词与词之间的横杠，第一个词之后的所有词必须大写。例如，padding-left变成了paddingLeft，而background-color变成了backgroundColor。还有一点，JavaScript属性名不应该被置于引号中：
 
-    // 正确    $element.velocity({ paddingLeft: 10 });    // 错误: 使用了横杠且没有大写    $element.velocity({ padding-left: 10 });    // 错误：在JavaScript格式的属性名两边使用了引号
+    // 正确
+    $element.velocity({ paddingLeft: 10 });
+    // 错误: 使用了横杠且没有大写
+    $element.velocity({ padding-left: 10 });
+    // 错误：在JavaScript格式的属性名两边使用了引号
     $element.velocity({ “paddingLeft”: 10 });
 
 ###值###
 
 Velocity支持`px`,`em`,`rem`,`%`,`deg`,`vw`和`vh`单位。如果你没有为数值提供某个类型的单位，一个基于CSS属性类型的合适的单位会被自动添加。对于大多数属性，px是默认单位，不过一个接收旋转角度的属性，比如rotateZ,会被自动添加deg单位：
 
-    $element.velocity({      top: 50, // 默认设置为px单位类型
+    $element.velocity({
+      top: 50, // 默认设置为px单位类型
       left: “50%”, // 我们手动指定了%单位类型      
-      rotateZ: 25 // 默认设置为deg单位类型    });
+      rotateZ: 25 // 默认设置为deg单位类型
+    });
     
 为你所有的属性值显式声明单位类型，通过使px单位和它的替代选择之间的对比更加明显来增加代码在快速浏览时的清晰程度。
 
 另一个Velocity相对于CSS的优势是它支持可以被选择性添加在属性值之前的四种数值运算符：+，—，*，和/。它们和JavaScript中的数学运算符一一对应。你可以把这些数值运算符与一个等号组合来进行相应的数学运算。请参考实例中的行内代码注释：
 
-    $element.velocity({      top: “50px”, // 没有运算符。不出所料地向前运动50px。      left: “-50”, // 负运算符。不出所料地向前运动-50px。      width: “+=5rem”, // 将当前宽度值转换为对应的rem值并加上5个单位值。
-      height: “-10rem”, // 将当前高度值转换为对应的rem值并减去10个单位值。      paddingLeft: “*=2” // 把当前的paddingLeft值加倍。      paddingRight: “/=2” // 把当前的paddingLeft值除以2。
+    $element.velocity({
+      top: “50px”, // 没有运算符。不出所料地向前运动50px。
+      left: “-50”, // 负运算符。不出所料地向前运动-50px。
+      width: “+=5rem”, // 将当前宽度值转换为对应的rem值并加上5个单位值。
+      height: “-10rem”, // 将当前高度值转换为对应的rem值并减去10个单位值。
+      paddingLeft: “*=2” // 把当前的paddingLeft值加倍。
+      paddingRight: “/=2” // 把当前的paddingLeft值除以2。
      });
 
 Velocity的简写特性，像数值运算符，把动画逻辑完全保留在动画引擎中。这不仅仅因排除了手动数值计算而使代码更加简洁，也通过告诉Velocity更多你计划如何对元素施加动画来提升了性能。Velocity处理的逻辑越多，它优化你的代码来达到更高的帧数的能力就越强。
@@ -136,7 +174,11 @@ Velocity的简写特性，像数值运算符，把动画逻辑完全保留在动
 
 当多个Velocity调用被连续链接在一个元素（或一系列元素）上的时候，它们会自动形成队列。这说明每个动画在前一个动画完成时开始：
 
-    $element      // 对width和height属性施加动画      .velocity({ width: “100px”, height: “100px” })      // 当宽度和高度的动画完成之后，对top属性施加动画      .velocity({ top: “50px” });
+    $element
+      // 对width和height属性施加动画
+      .velocity({ width: “100px”, height: “100px” })
+      // 当宽度和高度的动画完成之后，对top属性施加动画
+      .velocity({ top: “50px” });
       
 ##使用Velocity:选项##
 
@@ -146,11 +188,13 @@ Velocity的简写特性，像数值运算符，把动画逻辑完全保留在动
 
 你可以指定时长选项，它决定了一个动画调用要多长时间结束，以毫秒（1/1000秒）为单位或是三种简写时长之一：“慢”（相当于600ms），“普通”（400ms），或者“快”（200ms）。当以毫秒指定一个时长值时，应提供一个不带任何单位类型的整数：
 
-    // 施加时长1000ms（1秒）的动画    $element.velocity({ opacity: 1 }, { duration: 1000 });
+    // 施加时长1000ms（1秒）的动画
+    $element.velocity({ opacity: 1 }, { duration: 1000 });
     
 或者：
 
-        $element.velocity({ opacity: 1}, { duration: “slow” });
+    
+    $element.velocity({ opacity: 1}, { duration: “slow” });
    
 当你回顾你的代码时，使用命了名的简写时长的好处是它们表达了一个动画的节奏（是慢还是快？）。如果你全部使用这些简写，它们自然也将带给你的站点更统一的动画设计，因为所有的动画将会落在三个速度分类中而不是被传递一个随意的值。
 
@@ -173,7 +217,9 @@ Velocity的简写特性，像数值运算符，把动画逻辑完全保留在动
 
 +CSS缓动："ease-in", "ease-out", "ease-in-out", 和 "ease" (一个与"ease-in-out"有细微不同的版本)。
 
-    $element.velocity({ width: “100px” }, “ease-in-out”);+CSS贝塞尔曲线：贝塞尔曲线缓动允许对一个缓动加速曲线结构的完全控制。一条贝塞尔曲线通过指定一张图表上四个等距点的高度来定义，Velocity接收的图表格式是有四项二进制值的数组。访问cubic-bezier.com来查看一个创建贝塞尔曲线的互动指南。
+    $element.velocity({ width: “100px” }, “ease-in-out”);
+
++CSS贝塞尔曲线：贝塞尔曲线缓动允许对一个缓动加速曲线结构的完全控制。一条贝塞尔曲线通过指定一张图表上四个等距点的高度来定义，Velocity接收的图表格式是有四项二进制值的数组。访问cubic-bezier.com来查看一个创建贝塞尔曲线的互动指南。
 
     $element.velocity({ width: “100px” }, [ 0.17, 0.67, 0.83, 
     0.67 ]);
@@ -202,8 +248,15 @@ Velocity的简写特性，像数值运算符，把动画逻辑完全保留在动
 
 在这两种选项中，函数在每次动画调用时只被调用一次，就算多个元素同时被施加动画：
 
-    var $divs = $(“div”);    $divs.velocity(       { opacity: 0 },       // 在动画开始前打开一个警告窗口
-       {       begin: function () { console.log(“Begin!”); },        // 一旦动画完成就打开一个警告窗口       complete: function () { console.log(“Complete!”); }    } );
+    var $divs = $(“div”);
+    $divs.velocity(
+       { opacity: 0 },
+       // 在动画开始前打开一个警告窗口
+       {
+       begin: function () { console.log(“Begin!”); },
+        // 一旦动画完成就打开一个警告窗口
+       complete: function () { console.log(“Complete!”); }
+    } );
     
 *回调函数*
 
@@ -231,11 +284,17 @@ Velocity的简写特性，像数值运算符，把动画逻辑完全保留在动
     
 非无限循环对动画队列是有用的，不然它们将需要重复链式动画的代码。举个例子，如果你想要让一个元素弹上弹下两次（也许是警告用户有一条新消息在等待他们），没有优化的代码看起来大概是这样：
 
-    $element      // 假定translateY开始时为“0px”      .velocity({ translateY: “100px” })      .velocity({ translateY: “0px” })      .velocity({ translateY: “100px” })      .velocity({ translateY: “0px” });
+    $element
+      // 假定translateY开始时为“0px”
+      .velocity({ translateY: “100px” })
+      .velocity({ translateY: “0px” })
+      .velocity({ translateY: “100px” })
+      .velocity({ translateY: “0px” });
       
 更紧凑且易维护的代码版本看起来大概是这样：
 
-    // 重复（循环）这段动画两次    $element.velocity({ translateY: “100px” }, { loop: 2 });
+    // 重复（循环）这段动画两次
+    $element.velocity({ translateY: “100px” }, { loop: 2 });
     
 有了这个优化的版本，如果你已经在心里想好了最大值应该被改变多少（当前是100px），你只需要在一部分代码中更改最大值。如果在你的代码中有很多这种重复的例子，那么循环对你的工作流多么有益，是显而易见的。
 
@@ -243,17 +302,24 @@ Velocity的简写特性，像数值运算符，把动画逻辑完全保留在动
 
 首先，通过使加载指示器元素的透明度在可见和不可见之间无限循环，令其表现为有节奏的闪动：
 
-    // 假定透明度开始时是1（完全可见）    $element.velocity({ opacity: 0 }, { loop: true });
+    // 假定透明度开始时是1（完全可见）
+    $element.velocity({ opacity: 0 }, { loop: true });
     
 然后，一旦数据结束加载，你可以停止动画，然后隐藏这个元素：
 
-    $element      // 首先停止无限循环      .velocity(“stop”)      // ... 所以你可以对元素施加一个新动画，      // 你可以施加它来使元素变回不可见。      .velocity({ opacity: 0 });
+    $element
+      // 首先停止无限循环
+      .velocity(“stop”)
+      // ... 所以你可以对元素施加一个新动画，
+      // 你可以施加它来使元素变回不可见。
+      .velocity({ opacity: 0 });
       
 ###延时
 
 以毫秒指定延时选项,来在动画开始之前插入一个暂停。延时选项的目标是把动画的计时逻辑完整保留在Velocity中-与在一个Velocity动画开始时依赖使用jQuery的$.delay()函数来改变相反：
 
-    //在进行动画使透明度变为0之前等待100ms    $element.velocity({ opacity: 0 }, { delay: 100 });
+    //在进行动画使透明度变为0之前等待100ms
+    $element.velocity({ opacity: 0 }, { delay: 100 });
     
 你可以把loop选项和delay选项一起设定来创建一个循环交替间的暂停：
 
@@ -274,7 +340,9 @@ Velocity的显示与可见度选项与它们的CSS同仁直接对应，并且接
 
 上面的代码有效地替换了jQuery中的等效代码：
 
-    $element            .animate({ opacity:0 })            .hide();
+    $element
+            .animate({ opacity:0 })
+            .hide();
             
             
 *快速回顾：可见度与显示*
@@ -283,15 +351,21 @@ Velocity的显示与可见度选项与它们的CSS同仁直接对应，并且接
 
 注意，你可以设置元素的visibility为”hidden“来简单地把元素同时标记为不可见和无法交互，而不是把这个元素移出页面文档流。当你想隐藏一个继续在页面上占位的元素时这很有用：
 
-    // 将一个元素淡入到opacity:0，然后让它变得无法交互    $element.velocity({ opacity: 0 }, { visibility: “hidden” });
+    // 将一个元素淡入到opacity:0，然后让它变得无法交互
+    $element.velocity({ opacity: 0 }, { visibility: “hidden” });
     
 现在，让我们考虑相反方向的动画（显示元素而不是隐藏元素）：当`diaplay`或`visibility`被设为”none“或”hidden“之外的值，这个值会在动画开始前被设置，因此元素在即将到来的动画过程中是可见的。换句话说，你正在取消之前元素被移出视图时发生的隐藏过程。
 
 以下，`display`在元素开始淡入之前被设为”block“：
 
-    $element.velocity({ opacity: 1 }, { display: “block” });这有效地替换了等效的jQuery代码：
+    $element.velocity({ opacity: 1 }, { display: “block” });
 
-    $element      .show()      .animate({ opacity: 0 });
+
+这有效地替换了等效的jQuery代码：
+
+    $element
+      .show()
+      .animate({ opacity: 0 });
       
 *提示*
 
@@ -304,7 +378,8 @@ Velocity的显示与可见度选项与它们的CSS同仁直接对应，并且接
 注意Velocity包括了以上演示的切换透明度动画的简写方式。它们的功能和jQuery的`fadeIn
 `及`fadeOut`函数一模一样。你仅需传递相应地传递命令给Velocity作为第一个参数，并且，如果想要的话，你可以传入一个选项对象，像往常一样。
 
-    $element.velocity(“fadeIn”, { duration: 1000 });    $element.velocity(“fadeOut”, { duration: 1000 });
+    $element.velocity(“fadeIn”, { duration: 1000 });
+    $element.velocity(“fadeOut”, { duration: 1000 });
 
 
 ##使用Velocity：附加特性
@@ -322,7 +397,8 @@ Velocity的显示与可见度选项与它们的CSS同仁直接对应，并且接
     
 或
 
-    // 做和上面一样的事，不过把上一个Velocity调用的时长值替换为2000ms    $element.velocity(“reverse”, { duration: 2000 });
+    // 做和上面一样的事，不过把上一个Velocity调用的时长值替换为2000ms
+    $element.velocity(“reverse”, { duration: 2000 });
     
 *注意*
 
@@ -332,22 +408,30 @@ Velocity的显示与可见度选项与它们的CSS同仁直接对应，并且接
 
 传递“scroll”作为Velocity的第一个参数来滚动浏览器至一个元素的顶部。`scroll`命令和一个标准的Velocity调用表现一模一样；它可以带有参数并且会和其他链式Velocity调用一起被加入队列：
 
-    $element      .velocity(“scroll”, { duration: 1000, easing: “spring” })      .velocity({ opacity: 1 });这使用1000ms的时长和“spring”缓动将浏览器滚动到元素的顶部。然后，一旦元素被滚动进入视窗，它会完全淡入。
+    $element
+      .velocity(“scroll”, { duration: 1000, easing: “spring” })
+      .velocity({ opacity: 1 });
+
+这使用1000ms的时长和“spring”缓动将浏览器滚动到元素的顶部。然后，一旦元素被滚动进入视窗，它会完全淡入。
 
 为了向一个父元素有滚动条的元素滚动，你可以使用`container`选项，它接收一个jQuery对象或者一个原始的元素。注意CSS`position`属性必须被设为`relative`,`absolute`,或者`fixed`中的一个-`static`不会起作用。
 
-    // 滚动元素进入$(“#container”)元素的视图中    $element.velocity(“scroll”, { container: $(“#container”) });
+    // 滚动元素进入$(“#container”)元素的视图中
+    $element.velocity(“scroll”, { container: $(“#container”) });
     
 在两种情况中-不管滚动是相对于浏览器窗口还是相对于一个父元素-滚动命令总是被调用在*正被滚动进入视窗*的元素上。
 
 默认情况下，滚动发生在y轴。传入`axis：x`选项来水平滚动来取代垂直滚动：
 
-    // 滚动浏览器到目标div的左边缘    $element.velocity(“scroll”, { axis: “x” });
+    // 滚动浏览器到目标div的左边缘
+    $element.velocity(“scroll”, { axis: “x” });
     
 最后，滚动命令还独特地接收一个以px设定的`offset`选项，它偏移了目标滚动位置：
 
     // 滚动到距离元素上边缘上方50px的位置
-    $element.velocity(“scroll”, { duration: 1000, offset: “-50px” });    // 滚动到距离元素上边缘下方250px的位置    $element.velocity(“scroll”, { duration: 1000, offset: “250px” });
+    $element.velocity(“scroll”, { duration: 1000, offset: “-50px” });
+    // 滚动到距离元素上边缘下方250px的位置
+    $element.velocity(“scroll”, { duration: 1000, offset: “250px” });
     
 ###颜色
 
@@ -355,10 +439,14 @@ Velocity支持这些CSS属性：`color`,`backgroundColor`, `borderColor`,和`out
 
 参考以下例子中的行内注释：
 
-    $element.velocity({      // 施加动画使背景颜色变到以十六进制表示的黑色
+    $element.velocity({
+      // 施加动画使背景颜色变到以十六进制表示的黑色
       backgroundColor: “#000000”,
       // 同步地施加动画使背景的alpha分量（透明度）变到50%
-      backgroundColorAlpha: 0.5,      // 也对元素的文本颜色的red分量施加动画使其变为总量的一半      colorRed: 125    });
+      backgroundColorAlpha: 0.5,
+      // 也对元素的文本颜色的red分量施加动画使其变为总量的一半
+      colorRed: 125
+    });
     
 ###变形
 
@@ -374,7 +462,10 @@ CSS变形属性对在2D和3D空间的元素施加平移，缩放，和旋转操�
 
 在Velocity中，你可以在一个属性对象中以单独属性来施加这些组件带来的动画效果：
 
-    $element.velocity({      translateZ: “200px”,      rotateZ: “45deg”    });
+    $element.velocity({
+      translateZ: “200px”,
+      rotateZ: “45deg”
+    });
 
 ##使用Velocity：不使用jQuery（中级）
 
@@ -393,27 +484,38 @@ CSS变形属性对在2D和3D空间的元素施加平移，缩放，和旋转操�
 
 让我们进一步探索`document.querySelectorAll()`，因为它可能将成为你在不借助jQuery帮助时选择元素的利器。（这是一个性能强大的且被众浏览器广泛支持的函数。）使用jQuery的元素选择器语法，你可以简单地传递给`querySelectorAll`一个CSS选择器（和你在样式表中用来选择目标元素的选择器一样），并且它将以一个数组的形式返回所有符合的元素：
 
-    document.querySelectorAll(“body”); // 获取body元素    document.querySelectorAll(“.squares”); // 获取所有带“square”类的元素     
-    document.querySelectorAll(“div”); // 获取所有div    document.querySelectorAll(“#main”); //  获取所有id为“main”的元素     document.querySelectorAll(“#main div”); // 获取所有id为“main”的元素中的
+    document.querySelectorAll(“body”); // 获取body元素
+    document.querySelectorAll(“.squares”); // 获取所有带“square”类的元素     
+    document.querySelectorAll(“div”); // 获取所有div
+    document.querySelectorAll(“#main”); //  获取所有id为“main”的元素 
+    document.querySelectorAll(“#main div”); // 获取所有id为“main”的元素中的
     div
         
 如果你把这些查找之一的结果赋值给一个变量，随后你可以重复使用这个变量来对目标元素施加动画：
 
-    // 获取所有元素    var divs = document.querySelectorAll(“div”);    // 对所有div施加动画    Velocity(divs, { opacity: 0 }, 1000);
+    // 获取所有元素
+    var divs = document.querySelectorAll(“div”);
+    // 对所有div施加动画
+    Velocity(divs, { opacity: 0 }, 1000);
     
 因为你不再拓展jQuery元素对象，你可能在想如何把元素一个个链接起来，像这样：
 
-    // 它们彼此链接    $element       .velocity({ opacity: 0.5 }, 1000)       .velocity({ opacity: 1 }, 1000);
+    // 它们彼此链接
+    $element
+       .velocity({ opacity: 0.5 }, 1000)
+       .velocity({ opacity: 1 }, 1000);
        
 为了不借助jQuery来再现这个模式，简单地把一个函数接着另一个函数调用：
 
-    // 对同样地元素施加的动画彼此自动链接起来    Velocity(element, { opacity: 0 }, 1000);
+    // 对同样地元素施加的动画彼此自动链接起来
+    Velocity(element, { opacity: 0 }, 1000);
     Velocity(element, { opacity: 1 }, 1000);
     
 ###结语
 
 现在你已经有了对使用JavaScript进行web动画的好处的认识，加上对Velocity基础的一些掌握，你已经准备好去探索专业动画设计之下的迷人理论基础。
-
+
+
 
 
 

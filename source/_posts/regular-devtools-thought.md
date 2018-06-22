@@ -1,7 +1,7 @@
 title: Regular Devtools开发手记
 date: 2016-07-28 15:52:00
-tags:
-categories:
+tags: Tooling
+categories: Tooling
 ---
 
 ### Regular Devtools的前辈们

@@ -1,7 +1,11 @@
 title: 云端木犀-MAE初步构想
 date: 2017-05-27 21:29:43
-tags:
-categories:
+tags: 
+- Cloud
+- Muxistudio
+categories: 
+- Cloud
+- Muxistudio
 ---
 
 Muxi App Engine，简称MAE，是木犀的私有PaaS方案，也是木犀云的重要组成部分。MAE主要基于Docker和Kubernetes，为木犀所有应用的构建、部署、监控和扩容提供了一个统一的入口，让我们能专注于服务本身的开发。同时MAE也为木犀提供了一套标准化的运维流程，使得团队开发中的工程化程度进一步提高。

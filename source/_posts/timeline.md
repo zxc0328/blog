@@ -1,7 +1,7 @@
 title: 聊聊Chrome Devtools的Timeline
 date: 2016-11-29 20:15:49
-tags:
-categories:
+tags: Devtools
+categories: Devtools
 ---
 
 最近在进行移动端Web页面的性能调优时用到了Chrome Devtools的Timeline。Timeline主要是针对浏览器渲染引擎的相关数据进行记录。关于Timeline的介绍可以看[官方文档](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/timeline-tool)。下面主要说说实际应用时如何来分析Timeline的数据，然后优化页面。

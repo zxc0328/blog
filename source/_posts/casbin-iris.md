@@ -1,7 +1,11 @@
 title: Iris + Casbin 权限控制实战
 date: 2018-05-14 21:17:27
 tags:
+- Iris
+- Go
 categories:
+- Iris
+- Go
 ---
 
 

@@ -1,7 +1,7 @@
 title: "Http Basic Authorization的使用"
 date: 2015-11-04 13:03:42
-tags: Network
-categories:
+tags: Networking 
+categories: Networking
 ---
 ###1.Http Basic Authorization的请求格式
 

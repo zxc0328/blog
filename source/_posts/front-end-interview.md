@@ -1,7 +1,11 @@
 title: "前端面试题总结（持续更新）"
 date: 2016-03-11 16:51:36
-tags: Interview Front-end
+tags: 
+- Interview 
+- FE
 categories:
+- Interview 
+- FE
 ---
 
 接下来要参与大大小小的暑期实习笔试和面试。在这篇博客里我将总结一些常见的面试题。其中有一部分是我去年暑假找实习的时候总结的。现在看来，不免有些幼稚。慢慢完善吧！

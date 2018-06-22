@@ -1,7 +1,7 @@
 title: 终端工具翻墙不完全指南
 date: 2017-03-26 22:10:22
-tags:
-categories:
+tags: Terminal
+categories: Terminal
 ---
 
 

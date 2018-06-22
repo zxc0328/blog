@@ -1,7 +1,11 @@
 title: Liso源码阅读笔记
 date: 2018-02-12 11:16:05
 tags:
-categories:
+- server
+- c
+categories: 
+- server
+- c
 ---
 
 本文介绍了CMU 15-441的课程项目[Liso](https://www.cs.cmu.edu/~prs/15-441-F16/project1/project1.pdf)的一个实现。主要介绍了请求流程、Client状态机模型、Dynamic Buffer数据结构等等。SSL相关的部分没有涉及。

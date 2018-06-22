@@ -1,7 +1,7 @@
 title: 2016 JSConf China见闻
 date: 2016-09-07 11:29:53
-tags:
-categories:
+tags: JSConf
+categories: JSConf
 ---
 
 今年9月3号-4号的JSConf是我第二次参加开发者大会。这次JSConf可以说是被我期待很久的。两天，十多个Topic，来自各大国外公司的大神，Vue、RxJS、WebVR等话题，让我非常期待。

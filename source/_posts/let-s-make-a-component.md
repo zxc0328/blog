@@ -1,7 +1,7 @@
 title: 一个组件的诞生(上)
 date: 2016-09-29 10:24:27
-tags:
-categories:
+tags: Component
+categories: Component
 ---
 
 

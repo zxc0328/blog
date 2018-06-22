@@ -1,7 +1,7 @@
 title: 猪场实习感受-项目管理
 date: 2016-10-03 15:39:01
-tags:
-categories:
+tags: Netease
+categories: Netease
 ---
 
 

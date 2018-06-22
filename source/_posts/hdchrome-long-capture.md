@@ -1,7 +1,7 @@
 title: Headless Chrome long image capture issue
 date: 2018-02-12 11:16:21
-tags:
-categories:
+tags: Headless Chrome
+categories: Headless Chrome
 ---
 
 

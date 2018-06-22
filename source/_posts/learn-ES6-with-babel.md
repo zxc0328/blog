@@ -1,7 +1,7 @@
 title: "ES6探秘-Classes"
 date: 2015-10-22 09:23:57
 tags: ES6
-categories:
+categories: ES6
 ---
 
 ES6中增加了一些新特性，但从底层的角度来说，只是一些语法糖。  

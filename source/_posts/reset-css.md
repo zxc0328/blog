@@ -1,7 +1,7 @@
 title: "Thoughts on Reset.css"
 date: 2015-11-05 19:53:19
-tags:
-categories:
+tags: CSS
+categories: CSS
 ---
 ###导语
 CSS reset的作用主要就是清楚浏览器的默认样式，比如我们在Chrome里看到的`User Agent Stylesheet`就是Chrome浏览器的默认样式。不同的浏览器会有不同的默认样式，因此我们需要清除一些默认样式，**以达到在所有浏览器里显示效果的一致**。

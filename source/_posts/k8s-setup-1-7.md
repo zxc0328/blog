@@ -1,7 +1,11 @@
 title: Kubernete安装不完全指南
 date: 2017-10-26 19:21:26
-tags:
-categories:
+tags: 
+- Kubernetes
+- Cloud
+categories: 
+- Kubernetes
+- Cloud
 ---
 
 安装Kubernetes向来不是一件容易的事情。之前在集群上部署好的K8s突然出了问题，于是需要重新安装。这次没有之前那次那么顺利了，出现了很多奇怪的问题。但经过一番实践和总结，总算是得出了Kubernetes国内安装的一个不完全指南。这个指南理论上适用于任意版本的K8s。

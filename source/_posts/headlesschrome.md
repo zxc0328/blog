@@ -1,7 +1,7 @@
 title: Headless Chrome截图服务实战
 date: 2017-08-03 09:26:25
-tags:
-categories:
+tags: Headless Chrome
+categories: Headless Chrome
 ---
 
 ### TL;DR

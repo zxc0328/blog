@@ -1,7 +1,7 @@
 title: 使用Kubeadm 1.6部署Kubernetes
 date: 2017-05-24 19:52:27
-tags:
-categories:
+tags: Kubernetes
+categories: Kubernetes
 ---
 
 

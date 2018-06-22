@@ -1,7 +1,7 @@
 title: Table组件中slot内容的跨级传递
 date: 2017-09-19 15:00:09
-tags:
-categories:
+tags: Vue
+categories: Vue
 ---
 
 在开发MUI的[Table组件](https://github.com/Muxi-Studio/MUI/tree/dev/src/components/table)时，我们遇到了一个问题。用户在顶层组件中嵌套的内容，需要被保存到组件的数据中，并且在表格内部渲染出来。

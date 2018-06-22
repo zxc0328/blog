@@ -1,7 +1,7 @@
 title: 聊聊UI组件设计-Modal
 date: 2017-08-14 19:23:20
-tags:
-categories:
+tags: Component
+categories: Component
 ---
 
 在人机交互中，有一个概念叫做[Modality](https://en.wikipedia.org/wiki/Modality_(human–computer_interaction))，中文叫模态。模态，顾名思义，就是模拟。计算机可以模拟人通过各种通道接收的信息，比如视觉、听觉、触觉等等通道。视觉就通过显示器输出，听觉通过音响、触觉通过振动。同理，人也可以模拟计算机接收到的电信号，人可以通过键盘、触摸板等待设备来模拟0/1信号。

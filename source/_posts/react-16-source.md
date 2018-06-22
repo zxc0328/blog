@@ -1,7 +1,11 @@
 title:  React 16 Fiber源码速览
 date: 2017-09-28 22:50:36
-tags:
-categories:
+tags: 
+- React
+- Source code reading
+categories: 
+- React
+- Source code reading
 ---
 
 > 本文的写作有一部分没有完成，打算针对React 16.3再对本文进行修改，请大家留意

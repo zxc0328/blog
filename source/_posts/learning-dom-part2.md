@@ -1,7 +1,7 @@
 title: "DOM API详解（二）"
 date: 2016-01-26 15:58:34
 tags: DOM
-categories:
+categories: DOM
 ---
 
 ###四、API详解-DOM CORE
