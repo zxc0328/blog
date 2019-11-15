@@ -8,6 +8,8 @@ categories:
 - Muxistudio
 ---
 
+> 2019/6/5 今年我们有同学拿到了腾讯云和 Azure 的实习，所以未来在云计算上我们会有更多的领路人，来带领团队在这个方向进行探索。MAE 虽然还没做出来，但 k3s 的发现让我们在服务器上实现了自由，相信很快就会设计出下一代的 MAE 架构。
+
 Muxi App Engine，简称MAE，是木犀的私有PaaS方案，也是木犀云的重要组成部分。MAE主要基于Docker和Kubernetes，为木犀所有应用的构建、部署、监控和扩容提供了一个统一的入口，让我们能专注于服务本身的开发。同时MAE也为木犀提供了一套标准化的运维流程，使得团队开发中的工程化程度进一步提高。
 
 说的这么厉害，那如果你是一个技术小白，我应该如何来解释MAE呢？
@@ -34,7 +36,7 @@ MAE带来的最大变革是，今后我们的应用从一开始就应该按Cloud
 
 ### MAE的组成部分
 
-![mae parts](http://wx2.sinaimg.cn/large/64c45edcly1fg0dnygziij212a0ue4e7.jpg)
+![mae parts](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcly1fg0dnygziij212a0ue4e7.jpg)
 
 MAE的组成，从上到下，大致有三层：
 
@@ -46,7 +48,7 @@ MAE的组成，从上到下，大致有三层：
 
 那么作为一个分布式系统，一个用户的请求究竟是经过怎样的路径，到达最底层的Kubernetes Pod的呢？
 
-![mae request](http://wx4.sinaimg.cn/large/64c45edcly1fg0etf4yg9j20ku0r4k1f.jpg)
+![mae request](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcly1fg0etf4yg9j20ku0r4k1f.jpg)
 
 首先DNS把域名解析到Kubernetes的Master节点的公网IP上，然后部署在Master节点上的Nginx入口服务接管，Nginx根据MAE应用设置的域名和URL规则，将这个请求转发到对应应用的某个服务上。Kubernetes的服务都是可以通过`<Master内网IP>:<Service Port>`来进行访问的。然后Kubernetes proxy用iptables规则，将请求转发到某个节点上的Pod。
 
@@ -68,7 +70,7 @@ MAE做的抽象，一个是应用，应用之下是服务。对于这两个抽�
 
 部署服务之前，首先我们要构建镜像（构建之前可以引入CI，测试通过才可以构建镜像）。给镜像打上版本号，然后发布到云端的镜像仓库（可以用阿里云/蜂巢/Daocloud）。之后我们就可以在MAE中为某个服务新建一次部署了，填上新的版本号，点击部署，就启动了一次部署了。得益于Kubernetes超强的部署能力，我们可以回滚、暂停、继续每一次部署。
 
-![mae deployment](http://wx1.sinaimg.cn/large/64c45edcly1fg0era6a66j214q0mmwoc.jpg)
+![mae deployment](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcly1fg0era6a66j214q0mmwoc.jpg)
 
 MAE的API Server把服务目前的配置转换为`.yaml`格式，向Kubernetes API Server发送请求。然后Kubernetes会进行相应的处理。和Service相关的就调整Service，和Deployment相关的就调整Deployment。最终服务更新到目标状态，部署完成。
 
@@ -76,7 +78,7 @@ MAE的API Server把服务目前的配置转换为`.yaml`格式，向Kubernetes A
 
 MAE的逻辑组成已经介绍了，那MAE和具体的云主机之间是什么关系呢。请看下图：
 
-![mae nodes](http://wx3.sinaimg.cn/large/64c45edcly1fg0ftnkesej213a0o07g6.jpg)
+![mae nodes](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcly1fg0ftnkesej213a0o07g6.jpg)
 
 图中的一个框对应一台云主机。其中Master节点目前只打算部署在一台机器上。今后会做高可用（具体要看kubeadm的支持情况，自己部署HA也是可以的，参见[这篇博客](http://tonybai.com/2017/05/15/setup-a-ha-kubernetes-cluster-based-on-kubeadm-part1/)）。Kubernetes Node是负载Pod调度的机器，也就是分布式系统主从节点中的Slave节点。Kubernetes的Pod可能会被调度到其中任意一台机器上。因此应用在物理上运行在哪个节点，在MAE中并没有太多的意义。
 

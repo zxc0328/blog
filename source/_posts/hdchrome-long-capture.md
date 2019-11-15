@@ -13,7 +13,7 @@ Recently I had received complaint about my capture service not export complete i
 
 The broken image is like this:
 
-![broken](https://raw.githubusercontent.com/zxc0328/huihuihui-h5/master/Screen%20Shot%202017-12-19%20at%2010.30.21%20AM.png)
+![broken](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1fmlvek2n5xj208y07aaah.jpg)
 
 
 ### Chromium's limit

@@ -100,14 +100,14 @@ p->cgi_client[i] = clientfd;
 
 #### 客户端连接状态机模型
 
-![static fsm](https://wx1.sinaimg.cn/mw1024/64c45edcgy1flgj3kbvxjj20vu0g0adc.jpg)
+![static fsm](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1flgj3kbvxjj20vu0g0adc.jpg)
 
 客户端连接，如果是CGI连接，会比静态资源请求多一个`WAITING_FOR_CGI`的状态。这里我们需要注意的是，我们在读取一个连接的数据时，如果是一个POST请求，一般会分很多次。如果读取之后数据不够，这个连接的状态就会停留在`READY_FOR_READ`，等待下一次`select`循环。直到读取到足够的数据（根据Header里的`content-length`）之后，才把这个请求的状态转移到`READY_FOR_WRITE`。
 
 
 #### CGI连接状态机模型
 
-![cgi fsm](https://wx2.sinaimg.cn/mw1024/64c45edcgy1flgj3k7yopj20uc0dwacw.jpg)
+![cgi fsm](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1flgj3k7yopj20uc0dwacw.jpg)
 
 ### 长连接
 

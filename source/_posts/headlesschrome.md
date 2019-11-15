@@ -139,9 +139,9 @@ chrome-remote-interface将一个socket通信的来回封装成了一个异步的
 
 一开始我截屏的结果是这样的：
 
-![](http://wx3.sinaimg.cn/large/64c45edcgy1fi6ilca424j20ct08y0t3.jpg)
+![](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1fi6ilca424j20ct08y0t3.jpg)
 
-这和想象的不一样啊，下面的大半截都没有了 ![xiaohuangji](http://wx1.sinaimg.cn/large/64c45edcgy1fi6if8s30uj203d023q2q.jpg)
+这和想象的不一样啊，下面的大半截都没有了 ![xiaohuangji](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1fi6if8s30uj203d023q2q.jpg)
 
 所以要如何截取整个页面的呢？我在chrome-remote-interface的wiki里看到了一篇[文章](https://medium.com/@dschnr/using-headless-chrome-as-an-automated-screenshot-tool-4b07dffba79a?1)。然而截屏的时候报错，说`Emulation.forceViewport`不存在.原来这个API已经在新版的Chrome中被废弃了。
 
@@ -186,7 +186,7 @@ Page.loadEventFired(async() => {
 
 然后我们就可以愉快的给整个页面截屏了，比如这样：
 
-![full image](http://wx1.sinaimg.cn/large/64c45edcgy1fi6i22r84kj21402hdjux.jpg)
+![full image](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1fi6i22r84kj21402hdjux.jpg)
 
 
 ### Docker镜像
@@ -221,7 +221,7 @@ CMD [ "node", "index.js" ]
 
 服务之间的关系如下：
 
-![service](http://wx3.sinaimg.cn/large/64c45edcgy1fi6j3jqs0cj20fj07saaf.jpg)
+![service](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1fi6j3jqs0cj20fj07saaf.jpg)
 
 ### Links
 

@@ -30,7 +30,7 @@ categories:
 
 看源码怎么看，当然不能一把梭了。
 
-![](http://wx1.sinaimg.cn/large/64c45edcgy1fqw0buj08wj20go0aztie.jpg)
+![](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1fqw0buj08wj20go0aztie.jpg)
 
 看源码之前需要对项目的**原理**有一个基本的了解。所谓原理就是，这个项目有哪些组成部分，为了达到最终的产出，要经过哪几步流程。这些流程里，业界主流的方案有哪几种。
 
@@ -63,18 +63,17 @@ categories:
 
 我们看看 React 的目录结构。React 是一个 monorepo。也就是一个仓库里包含了多个子仓库。我们在 packages 目录下可以看到很多单独的 package：
 
-![](https://wx3.sinaimg.cn/mw1024/64c45edcgy1fqsdkkvpjtj21k00wmaka.jpg)
+![](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1fqsdkkvpjtj21k00wmaka.jpg)
 
 在 React 16 之后，React 的代码分为 React Core，Renderer 和 Reconciler 三部分。这是因为 React 的设计让我们可以把负责映射数据到 UI 的 Reconciler 以及负责渲染 Vritual DOM 到各个终端的 Renderer 和 React Core 分开。React Core 包含了 React 的类定义和一些顶级 API。大部分的渲染和 View 层 diff 的逻辑都在 Reconciler 和 Renderer 中。
 
 Babel 也是一个 monorepo。Babel 的核心代码是 babel-core 这个 package，Babel 开放了接口，让我们可以自定义 Visitor，在AST转换时被调用。所以 Babel 的仓库中还包括了很多插件，真正实现语法转换的其实是这些插件，而不是 babel-core 本身。
 
-![](http://wx4.sinaimg.cn/large/64c45edcgy1fqv1g5muerj21jm14kqe3.jpg)
+![](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1fqv1g5muerj21jm14kqe3.jpg)
 
 Vuejs 的代码比较典型，核心代码在 src 目录下，按功能模块划分。因为 Vue 也支持多平台渲染，所以把平台相关的代码都放到了 platform 文件夹下，core 文件夹中是 Vue 的核心代码，compiler 是 Vue 的模板编译器，把 HTML 风格的模板编译为 render function。
 
-
-![](https://wx1.sinaimg.cn/mw1024/64c45edcgy1fqshma4atzj21js0ietdc.jpg)
+![](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1fqshma4atzj21js0ietdc.jpg)
 
 
 Webpack 和 Babel 一样，可以说都是基于插件的系统。Webpack 的主要源码在 lib 目录下，里面的 webpack.js 就是入口文件。
@@ -111,12 +110,12 @@ Component.prototype.setState = function(partialState, callback) {
 
 然后运行本地 React build 的 demo 页面，让组件触发 setState，我们就可以在 Devtool 里看到断点了。
 
-我们走进 this.updater.enqueueSetState 这个调用，就来到了 ReactFiberClassComponent 这个函数中的 enqueueSetState，这里调用了 enqueueUpdate 和 scheduleWork 两个函数，如果要深入 setState 之后的流程，我们只需要再点击 ![](http://wx2.sinaimg.cn/large/64c45edcgy1fqx8qcid0aj200i00q053.jpg) 走进这两个函数里看具体的代码就可以了。
+我们走进 this.updater.enqueueSetState 这个调用，就来到了 ReactFiberClassComponent 这个函数中的 enqueueSetState，这里调用了 enqueueUpdate 和 scheduleWork 两个函数，如果要深入 setState 之后的流程，我们只需要再点击 ![](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1fqx8qcid0aj200i00q053.jpg) 走进这两个函数里看具体的代码就可以了。
 
 
 如果想看 setState 之前发生了什么，我们只需要看 Devtool 右边的调用栈：
 
-![](http://wx2.sinaimg.cn/large/64c45edcgy1fqvtw441ytj20c60ukae9.jpg)
+![](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1fqvtw441ytj20c60ukae9.jpg)
 
 点击每一个 frame 就可以跳到对应的函数中，并且恢复当时的上下文。
 

@@ -60,17 +60,19 @@ categories: Muxistudio
 
 联创Hackday
 
-![hackday](http://7xj431.com1.z0.glb.clouddn.com/20150606_230735.jpg)
+(图片找不到了)
+
+<!--![hackday](http://7xj431.com1.z0.glb.clouddn.com/20150606_230735.jpg)-->
 
 暑假承浩买了Mac，从此就一发不可收拾。那个暑假我在极验实习。其他人进行了我们第一次的夏令营（夏令营这个想法也是炳权提供的）。那个夏令营还是很愉快的，我们做出了第一版的内网，对于Flask的掌握已经好很多了。
 
 夏令营照片：
 
-![xialy](http://ww4.sinaimg.cn/mw690/0067HQaegw1ew2zdt5kfvj318g0xc7kh.jpg)
+![](https://raw.githubusercontent.com/zxc0328/for-picgo/master/0067HQaegw1ew2zdrukn6j318g0xck7p.jpg)
 
 夏令营最后去落雁岛玩的照片：
 
-![lyd](http://ww2.sinaimg.cn/mw690/64c45edcjw1fb0mmjzukkj21ci0ya4qp.jpg)
+![](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcjw1fb0mmjzukkj21ci0ya4qp.jpg)
 
 2015年9月，团队已经初具规模了。后面的事情，15级的同学应该都清楚了。
 
@@ -82,13 +84,15 @@ categories: Muxistudio
 
 一开始，i华大技术中心的办公地点是在304。那时候我们还是非常自由的，304可以随意的改造。经历过那段时刻的同学应该知道，那段时间是很有归属感的一段时间：
 
-![](http://ww3.sinaimg.cn/mw690/0067HQaegw1ew2zdsct9bj30hs0hsgpb.jpg)
+![](https://raw.githubusercontent.com/zxc0328/for-picgo/master/0067HQaegw1ew2zdsct9bj30hs0hsgpb.jpg)
 
-![](http://7xj431.com1.z0.glb.clouddn.com/20150402_202558.jpg)
+<!--![](http://7xj431.com1.z0.glb.clouddn.com/20150402_202558.jpg)-->
 
 直到今年5月份，304和306装修。我仓皇中去合租了一间房子，在教工宿舍，作为我们的临时工作室：
 
-![](http://7xj431.com1.z0.glb.clouddn.com/IMG20160622155941.jpg)
+(图片找不到了)
+
+<!--![](http://7xj431.com1.z0.glb.clouddn.com/IMG20160622155941.jpg)-->
 
 那段时光是难忘的，也是别扭的，痛苦的。那只狗，上门的邻居，狭小的空间，和我自己当时的各种压力混合在一起。
 

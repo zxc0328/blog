@@ -2,12 +2,31 @@ title: About Me
 date: 2016-11-17 12:43:04
 ---
 
-华中师范大学[木犀团队](http://github.com/muxi-studio) || 前端工程师 || 平时喜欢研究前端工具和框架 || 喜欢研究函数式、编程语言、编译原理 || 会一点点[iOS](https://github.com/Muxi-Studio/ccnubox-iOS) || 对移动前端很感兴趣 || 绿城球迷 ||这是我的[Github](https://github.com/zxc0328)和[微博](http://www.weibo.com/zindex/)
+华中师范大学[木犀团队](http://github.com/muxi-studio) || 致力于打造大学里学习互联网技能的第二课堂 || Web 开发者 || 最近的兴趣是 Golang，Kubernetes 以及云计算，大数据方向的各种 || 会一点点[iOS](https://github.com/Muxi-Studio/ccnubox-iOS) || 对跨端技术（Weex 等等）很感兴趣 || 绿城球迷 ||这是我的[Github](https://github.com/zxc0328)和[微博](http://www.weibo.com/zindex/)
+
+### 我喜欢的课程
+
++ [趣谈网络协议](https://time.geekbang.org/column/intro/85) 讲的很有趣
++ [K8s专栏](https://time.geekbang.org/column/intro/116) 很有深度，讲师自己就懂原理，是研究者，不仅仅只是一个使用者
++ [CMU 数据库](https://15445.courses.cs.cmu.edu/) Lab 很硬核，Youtube 上有讲课视频
++ [UW 数据可视化](https://courses.cs.washington.edu/courses/cse442/18au/)  
 
 
 ### 我喜欢的书
 
 我是一个非常喜欢找书、看技术书的人。一本好的技术书，从排版、字体、用词、配图、内容编排、有趣的点缀等等各个方面都有可以称道的地方。
+
+#### 计算机基础
+
++ [*Computer Systems: A Programmer's Perspective 3rd*](http://csapp.cs.cmu.edu/)
+
+<!--![](http://csapp.cs.cmu.edu/3e/images/csapp3e-cover.jpg)-->
+
+经典的计算机系统课程。一门课包括了国内计算机专业的数门课程，但讲的更好。因为讲的时候是从程序员视角去讲的，不会过多在意硬件上的细节。例子以 Unix 下的环境编程为基础，后半段对于 Unix 下的进程，线程，文件操作，内存，网络等等系统编程方面的话题都有涉及，可以说学完了这本书，还顺便入门了 Unix 系统编程。Lab 设计非常有特色。
+
++ [*编码：隐匿在计算机软硬件背后的语言*](https://book.douban.com/subject/4822685/)
+
+从 0 开始教你如何构建一台计算机。从编码和门电路开始，到加法器和存储器。大学里学的那些组成原理课程在这本书里面以一种更自然的形式出现，一步一步，引人入胜，通俗易懂。
 
 #### JavaScript
 
@@ -68,6 +87,31 @@ CSS权威指南第四版！一本1000页的巨著。涵盖了目前CSS主流标�
 
 这本书基本可以做到把**CSS规范用人话讲出来**，这样的目标。所以这本书自然比其他更感性的CSS介绍文章更权威一些。当然这个也是见仁见智的。有些人就更喜欢形象化的比喻才能理解。我个人是非常喜欢在用过一个特性之后，对其进行深入的了解，然后掌握这个特性。比如Flexbox，里面其实是有很多内在的概念的。用Flex布局，很快就可以上手。但如果问起更深入的概念，就不一定会了解。CSS权威指南就是这样一本让你可以用接近CSS规范的视角来学习的神书。
 
+
+### 年度小结
+
+
+#### 2014-2016
+
+入门前端，并且找到实习，进入了这个行业
+
+#### 2017-2018
+
+基层前端工程师，对 BI 产品有了一定的了解。
+
+#### 2018-至今
+
+横向+纵向学习中。
+
+#### 2019 的目标
+
++ 熟练掌握 Golang
++ 熟练掌握 Go Web 开发
++ K8s 深入 + 源码
++ WebGL 入门
++ 计算机网络 + 数据库基础学习
++ TypeScript 精进
++ 实践前端项目架构
 
 <!--
 

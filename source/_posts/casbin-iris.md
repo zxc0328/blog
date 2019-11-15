@@ -18,9 +18,7 @@ categories:
 
 Iris 这个框架是基于中间件的，和 Nodejs 的 Koa 和 Express 很像。所谓中间件机制，就是一个请求到达之后，会生成一个上下文信息，里面包含了这个请求的一些信息。然后我们依次调用中间件函数，把上下文对象作为参数传入。需要注意是中间件函数的调用是嵌套的，在中间件函数中我们可以调用 `ctx.Next()` 方法，进入下一个中间件函数。当最后一个中间件函数返回时，之前调用过的中间件会依次返回。这个数据流被形象的称为“洋葱模型”。
 
-![](http://wx4.sinaimg.cn/large/64c45edcgy1frlkp8fedzj20da0c3t91.jpg
-)
-
+![](https://raw.githubusercontent.com/zxc0328/for-picgo/master/64c45edcgy1frlkp8fedzj20da0c3t91.jpg)
 
 
 一个典型的中间件是这样的：
